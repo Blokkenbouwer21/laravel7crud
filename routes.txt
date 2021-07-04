@@ -1,0 +1,10 @@
+routes/web.php
+
+Route::get('/customer', 'TestController@add_customer_form')->name('customer.add');
+Route::post('/customer', 'TestController@submit_customer_data')->name('customer.save');
+Route::get('/customer/list', 'TestController@fetch_all_customer')->name('customer.list');
+Route::get('/customer/edit/{customer}', 'TestController@edit_customer_form')->name('customer.edit');
+Route::patch('/customer/edit/{customer}', 'TestController@edit_customer_form_submit')->name('customer.update');
+Route::get('/customer/{customer}', 'TestController@view_single_customer')->name('customer.view');
+Route::delete('/customer/{customer}', 'TestController@delete_customer')->name('customer.delete');
+
